@@ -6,16 +6,26 @@ $font-lg: 30pt;
 $font-md: 17pt;
 $font-sm: 10pt;
 
+$size: 10px;
+
 @mixin padding($pad) {
   margin: $pad;
   padding: $pad;
 }
 
-@mixin hover($duur1, $duur2, $moz1, $moz2) {
+@mixin wow($duur1...) {
   transition-duration: $duur1;
-  transition-delay: $duur2;
-  -moz-transition-delay: $moz1;
-  -moz-transition-duration: $moz2;
+  transition-timing-function: ease-in;
+}
+
+%uitbreiden {
+  background-color: pink;
+  color: #2d8bea;
+  text-align: center;
+}
+
+@function increaseFontSize() {
+
 }
 
 
@@ -50,12 +60,14 @@ $font-sm: 10pt;
       color: $color-tertiary;
       text-align: center;
     &:hover {
+      @inlude wow(2s);
       color: #2d8bea;
-      @inlude hover(2s, 3s, 3s, 2s)
+
     }
     }
 }
+p {
+  @extend %uitbreiden;
 
-
-
+}
 
