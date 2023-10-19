@@ -11,6 +11,13 @@ $font-sm: 10pt;
   padding: $pad;
 }
 
+@mixin hover($duur1, $duur2, $moz1, $moz2) {
+  transition-duration: $duur1;
+  transition-delay: $duur2;
+  -moz-transition-delay: $moz1;
+  -moz-transition-duration: $moz2;
+}
+
 
 .nav {
   background-color: $color-primary;
@@ -42,6 +49,10 @@ $font-sm: 10pt;
       font-size: $font-md;
       color: $color-tertiary;
       text-align: center;
+    &:hover {
+      color: #2d8bea;
+      @inlude hover(2s, 3s, 3s, 2s)
+    }
     }
 }
 
