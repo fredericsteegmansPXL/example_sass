@@ -6,12 +6,29 @@ $font-lg: 30pt;
 $font-md: 17pt;
 $font-sm: 10pt;
 
+@mixin padding {
+  margin: 3px;
+  padding: 3px;
+}
+
 
 .nav {
   background-color: $color-primary;
+  @include padding;
+  ul {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
 }
 
 .banner {
+  @include padding;
   h1 {
     font-size: $font-lg;
     color: $color-secondary;
@@ -20,6 +37,7 @@ $font-sm: 10pt;
 }
 
 .footer {
+  @include padding;
   h3 {
       font-size: $font-md;
       color: $color-tertiary;
