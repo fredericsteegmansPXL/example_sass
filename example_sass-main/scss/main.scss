@@ -6,15 +6,15 @@ $font-lg: 30pt;
 $font-md: 17pt;
 $font-sm: 10pt;
 
-@mixin padding {
-  margin: 3px;
-  padding: 3px;
+@mixin padding($pad) {
+  margin: $pad;
+  padding: $pad;
 }
 
 
 .nav {
   background-color: $color-primary;
-  @include padding;
+  @include padding(5px);
   ul {
     list-style-type: none;
     a {
@@ -28,7 +28,7 @@ $font-sm: 10pt;
 }
 
 .banner {
-  @include padding;
+  @include padding(3px);
   h1 {
     font-size: $font-lg;
     color: $color-secondary;
@@ -37,7 +37,7 @@ $font-sm: 10pt;
 }
 
 .footer {
-  @include padding;
+  @include padding(3px);
   h3 {
       font-size: $font-md;
       color: $color-tertiary;
