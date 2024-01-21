@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.footer {
+  @include padding(3px);
+  @include colorTransition(color 3s, background-color 4©s);
+  h3 {
+    font-size: $font-md;
+    color: $color-tertiary;
+    text-align: center;
+    &:hover {
+      background-color: $color-tertiary;
+      color: #2d8bea;
+    }
+  }
+}

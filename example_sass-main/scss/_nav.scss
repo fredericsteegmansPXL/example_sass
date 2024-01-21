@@ -1,0 +1,16 @@
+@use 'global' as *;
+
+.nav {
+  background-color: $color-primary;
+  @include padding(5px);
+  ul {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
+}

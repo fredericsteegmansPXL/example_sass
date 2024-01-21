@@ -1,73 +1,7 @@
-$color-primary: #fcf3e2 !global;
-$color-secondary: #ff1151 !global;
-$color-tertiary: #94d568 !global;
-
-$font-lg: 30pt;
-$font-md: 17pt;
-$font-sm: 10pt;
-
-$size: 10px;
-
-@mixin padding($pad) {
-  margin: $pad;
-  padding: $pad;
-}
-
-@mixin wow($duur1...) {
-  transition-duration: $duur1;
-  transition-timing-function: ease-in;
-}
-
-%uitbreiden {
-  background-color: pink;
-  color: #2d8bea;
-  text-align: center;
-}
-
-@function increaseFontSize() {
-
-}
+@use 'global';
+@use 'footer';
+@use 'nav';
+@use 'section';
 
 
-.nav {
-  background-color: $color-primary;
-  @include padding(5px);
-  ul {
-    list-style-type: none;
-    a {
-      text-decoration: none;
-      color: #000;
-      &:hover {
-        color: $color-tertiary;
-      }
-    }
-  }
-}
-
-.banner {
-  @include padding(3px);
-  h1 {
-    font-size: $font-lg;
-    color: $color-secondary;
-    text-align: center;
-  }
-}
-
-.footer {
-  @include padding(3px);
-  h3 {
-      font-size: $font-md;
-      color: $color-tertiary;
-      text-align: center;
-    &:hover {
-      @inlude wow(2s);
-      color: #2d8bea;
-
-    }
-    }
-}
-p {
-  @extend %uitbreiden;
-
-}
 
