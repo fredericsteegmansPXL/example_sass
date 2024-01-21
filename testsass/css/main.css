@@ -1,5 +1,50 @@
-body {
-  background-color: #d6d6ff;
+.banner {
+  background-color: #a4c1ff;
+  color: #3a3a69;
+  text-align: center;
+}
+
+.footer {
+  margin: 3px;
+  padding: 20px;
+  transition: color 0.5s, background-color 1s;
+}
+.footer:hover {
+  transition: color 0.5s, background-color 1s;
+  background-color: #dff551;
+  color: #a4c1ff;
+}
+.footer h3 {
+  color: #a4c1ff;
+  font-size: 60pt;
+  text-align: center;
+}
+
+.nav {
+  background-color: #a4c1ff;
+  margin: 3px;
+  padding: 10px;
+}
+.nav li {
+  list-style-type: none;
+}
+.nav li a {
+  text-decoration: none;
+  color: yellow; /*  of $tertiary-color  */
+  font-size: 10pt;
+}
+.nav li a:hover {
+  color: #3a3a69;
+}
+
+.banner {
+  margin: 3px;
+  padding: 3px;
+}
+.banner h1 {
+  color: #3a3a69;
+  font-size: 30pt;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

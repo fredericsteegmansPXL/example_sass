@@ -1,0 +1,26 @@
+$primary-color: #a4c1ff;
+$secondary-color: #3a3a69;
+$tertiary-color: yellow;
+
+$font-lg: 30pt;
+$font-md: 20pt;
+$font-sm: 10pt;
+
+%background-primary {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+}
+
+@mixin margin-padding($padding) {
+  margin: 3px;
+  padding: $padding;
+}
+
+@mixin colorTransition($params...) {
+  transition: $params;
+}
+
+@function increaseFontSize($size) {
+  @return $size * 2
+}
